@@ -10,6 +10,9 @@
     --default-radius: 8px;
 }
 
+
+
+
 /* --- GLOBAL & RESET STYLES --- */
 * {
     margin: 0;
@@ -48,6 +51,10 @@ a {
     margin: 0 auto;
 }
 
+
+
+
+
 /* --- HEADER & NAVIGATION --- */
 header {
     background-color: var(--primary-color);
@@ -63,10 +70,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows nav to wrap on small screens */
 }
 
-.logo {
+.initials {
     font-size: 1.8em;
     font-weight: bold;
 }
@@ -86,6 +92,10 @@ nav ul li a.cart-link {
     color: var(--secondary-color);
 }
 
+
+
+
+
 /* --- HERO SECTION --- */
 .hero-section {
     background-image: url('https://images.unsplash.com/photo-1530982011887-3cc11cc85693?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1032');
@@ -97,18 +107,7 @@ nav ul li a.cart-link {
     position: relative;
 }
 
-/* This pseudo-element adds a dark overlay for better text readability */
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-/* Ensures content is above the overlay */
 .hero-section .box {
     position: relative;
     z-index: 1;
@@ -123,6 +122,11 @@ nav ul li a.cart-link {
     font-size: 1.3em;
 }
 
+
+
+
+
+
 /* --- PRODUCTS SECTION --- */
 .products-section {
     padding: 60px 0;
@@ -134,11 +138,8 @@ nav ul li a.cart-link {
     font-size: 2.5em;
 }
 
-/* The heart of the responsive design! */
 .product-grid {
     display: grid;
-    /* auto-fit creates as many columns as will fit */
-    /* minmax sets the minimum and maximum size of each column */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
@@ -163,7 +164,7 @@ nav ul li a.cart-link {
 .product-card img {
     max-width: 100%;
     height: 150px;
-    object-fit: contain; /* Ensures image aspect ratio is maintained */
+    object-fit: contain;
     margin-bottom: 20px;
 }
 
@@ -188,13 +189,17 @@ nav ul li a.cart-link {
     font-weight: bold;
     cursor: pointer;
     margin-top: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .add-to-cart-btn:hover {
     background-color: #b85a00;
     transform: scale(1.05);
 }
+
+
+
+
+
 
 /* --- ABOUT SECTION --- */
 .about-section {
@@ -216,30 +221,35 @@ nav ul li a.cart-link {
 
 
 
-/* --- CART MODAL STYLES --- */
-.modal-overlay {
+
+
+
+
+
+
+/* --- CART list STYLES --- */
+.list-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.773);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* When the modal is not hidden, make it visible */
-.modal-overlay:not(.hidden) {
+/* When the list is not hidden, make it visible */
+.list-overlay:not(.hidden) {
     opacity: 1;
     visibility: visible;
 }
 
-.modal-content {
+.list-content {
     background-color: var(--card-background);
     padding: 30px;
     border-radius: var(--default-radius);
@@ -249,14 +259,14 @@ nav ul li a.cart-link {
     overflow-y: auto;
     position: relative;
     transform: scale(0.95);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.modal-overlay:not(.hidden) .modal-content {
+.list-overlay:not(.hidden) .list-content {
     transform: scale(1);
 }
 
-.close-modal-btn {
+.close-list-btn {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -267,7 +277,7 @@ nav ul li a.cart-link {
     color: #888;
 }
 
-.modal-content h2 {
+.list-content h2 {
     margin-bottom: 25px;
     text-align: center;
 }
@@ -300,14 +310,10 @@ nav ul li a.cart-link {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
-.remove-from-cart-btn:hover {
-    background-color: #c0392b;
-}
 
-.modal-footer {
+.list-footer {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -329,28 +335,20 @@ nav ul li a.cart-link {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .checkout-btn:hover {
     background-color: #229954;
 }
 
-/* Helper class to hide the modal */
 .hidden {
     display: none;
 }
 
-/* Animation for the cart icon */
-.cart-pop {
-    animation: pop 0.3s ease-out;
-}
 
-@keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1); }
-}
+
+
 
 
 /* --- FOOTER --- */
