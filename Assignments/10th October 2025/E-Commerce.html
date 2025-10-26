@@ -1,0 +1,239 @@
+<html>
+
+    <head>
+
+        <title>Sani Eneojo Emmanuel's E-Commerce Site</title>
+
+
+        <style>
+
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                background-color: #f4f4f4;                
+            }
+
+            .box {
+                width: 90%;
+                margin: auto;
+            }
+
+            
+            header {
+                background-color: #502c2c;
+                color: white;
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+            }
+
+            header .initials {
+                font-size: 1.5em;
+                font-weight: bold;
+                padding-left: 20px;
+            }
+
+            nav ul {                
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            
+            .intro {
+                background-image: url('https://images.unsplash.com/photo-1530982011887-3cc11cc85693?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1032');
+                background-size: cover;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 100px 0;
+            }
+
+            .intro h1 {
+                font-size: 3em;
+                margin: 0;
+            }
+            
+            .intro p {
+                font-size: 1.2em;
+            }
+
+            
+            .products-div {
+                padding: 40px 0;
+            }
+
+
+            .products-div h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 2em;
+            }
+
+            .product-grid {
+                justify-content: center;
+                grid-template-columns: 200px 200px 200px 200px;
+                display: grid;
+                gap: 20px;
+            }
+
+            .product-card {
+                max-width: 200px;
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 8px;                
+                text-align: center;
+                padding: 20px;
+
+            }
+
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+            }
+
+            .product-card h3 {
+                font-size: 1.2em;
+                margin: 10px 0;
+            }
+
+            .add-to-cart-btn {
+                background-color: #ff9900;
+                color: #000000;
+                border: 1px solid #a88734;
+                padding: 10px 20px;
+                border-radius: 5px;                
+                font-weight: bold;
+                margin-top: 15px;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            
+            .about-div {
+                padding: 40px 0;
+                background-color: #f4f4f4;
+            }
+
+            .about-div h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 2em;
+            }
+
+            .about-div p {
+                text-align: center;
+                line-height: 1.6;
+                max-width: 700px;
+                margin: 0 auto 30px auto;
+            }
+
+            
+            .footer {
+                background-color: #502c2c;
+                color: white;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="initials">SEE</div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li>Cart (0)</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <div id="home" class="intro">
+                <div class="box">
+                    <h1>Sani Eneojo Emmanuel Store</h1>
+                    <p>Computer Engineering - 22CJ031141</p>
+                </div>
+            </div>
+
+            <div id="products" class="products-div">
+
+                <div class="box">
+                    <h2>Products</h2>
+
+
+                    <div class="product-grid"> 
+
+                        <div class="product-card">
+                            <img src="https://crdms.images.consumerreports.org/prod/products/cr/models/399694-smartphones-apple-iphone-11-10008711.png" alt="Smartphone Picture">
+                            <h3>Latest Model Smartphone</h3>
+                            <p>N99,999</p>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                        </div>
+                        
+                        <div class="product-card">
+                            <img src="https://images.ctfassets.net/16nm6vz43ids/GY2Ylx0KMmMUBttl2EAaO/fc09cf3884be561f972745b46e00ef6a/Things_to_do_on_your_new_laptop.jpg?fm=webp&q=65" alt="Laptop Picture">
+                            <h3>High-Performance Laptop</h3>
+                            <p>N1,499,999</p>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                        </div>
+
+                        
+                        <div class="product-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4KZg4oahu2rS11bnbBk5fhn971cBfP7mtzw&s" alt="Headphones Picture">
+                            <h3>Noise-Cancelling Headphones</h3>
+                            <p>N284,999</p>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                        </div>
+
+                        
+                        <div class="product-card">
+                            <img src="https://spectrumonline.ng/wp-content/uploads/2023/12/Oraimo-OSW-30-Watch-2R-Smartwatch.webp" alt="Smartwatch Picture">
+                            <h3>Advanced Smartwatch</h3>
+                            <p>N159,999</p>
+                            <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="about" class="about-div">
+                <div class="box">
+                    <h2>About Me</h2>
+                    <p>
+                        Welcome to my E-Store Assignment! I'm passionate about providing the latest and greatest in technology. This is a demonstration of a modern e-commerce layout for academic purposes, showcasing skills in HTML and Internal CSS.
+                    </p>
+                </div>
+            </div>
+
+        
+
+        </main>
+
+        
+        <div class="footer">
+
+            <p>CEN434 - Sani Eneojo Emmanuel - 22CJ031141</p>
+
+        </div>
+        
+
+    </body>
+    
+</html>
