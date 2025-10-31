@@ -36,13 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open / close the cart
     cartLink.addEventListener('click', (e) => {
         e.preventDefault();
-        openCart();
+        cartList.classList.remove('hidden');
     });
 
-    closeListBtn.addEventListener('click', closeCart);
+    closeListBtn.addEventListener('click');
 
     cartList.addEventListener('click', (e) => {
-        if (e.target === cartList) closeCart();
+        if (e.target === cartList){
+            cartList.classList.add('hidden');
+        };
     });
 
     
@@ -124,13 +126,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTotalPrice() {
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         totalPriceSpan.textContent = `N${total.toLocaleString()}`;
-    }
-
-    function openCart() {
-        cartList.classList.remove('hidden');
-    }
-
-    function closeCart() {
-        cartList.classList.add('hidden');
     }
 });
